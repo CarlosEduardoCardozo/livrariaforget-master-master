@@ -7,36 +7,7 @@ export default {
       novo_autor: "",
       nova_categoria: "",
       nova_editora: "",
-      livros: [
-        {
-          id: "f12bc7ce-5ca7-4cbf-ac6e-be3e59cb2862",
-          nome_livro: "Diário de um Banana",
-          autor: "Jeff Kinney",
-          categoria: "Ficção Científica",
-          editora: "VR Editora",
-        },
-        {
-          id: "b880659d-5d33-4607-ae19-8a22a738b509",
-          nome_livro: "A Seleção",
-          autor: "Kiera Cass",
-          categoria: "Romance",
-          editora: "Seguinte",
-        },
-        {
-          id: "0f97fea6-72ac-4ee0-bf1b-92516d3417e1",
-          nome_livro: "A culpa é das Estrelas",
-          autor: "John Green",
-          categoria: "Romance Drama",
-          editora: "Intriseca",
-        },
-        {
-          id: "25c441be-e90a-4847-98a7-0d888e4c981f",
-          nome_livro: "Anjo da escuridão",
-          autor: "Sidney Sheldon",
-          categoria: "Suspense",
-          editora: "Arcoíris",
-        },
-      ],
+      livros: [],
     };
   },
   methods: {
@@ -91,7 +62,9 @@ export default {
 
             <td>
               <button class="btnedit" @click="alerta(livro)">Editar</button>
-              <button class="btnexcluir" @click="excluir(livro)">Excluir</button>
+              <button class="btnexcluir" @click="excluir(livro)">
+                Excluir
+              </button>
             </td>
           </tr>
         </tbody>
@@ -126,7 +99,6 @@ export default {
           @keyup.enter="salvar"
         />
         <button @click="salvar" class="btncad">OK</button>
-        <div class="tabelas"></div>
       </div>
     </div>
   </main>
@@ -163,6 +135,25 @@ table {
   position: absolute;
   top: 136px;
   left: 68px;
+}
+table {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid #3b2020;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #300707;
+}
+table thead {
+  background-color: #3b2020;
+  color: #ffffff;
+}
+table thead th {
+  font-weight: bolder;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #6c3a3a;
 }
 .cadastro {
   position: absolute;
@@ -271,7 +262,7 @@ button {
   width: 80px;
   height: 30px;
   left: 327px;
-  top: 105px;
+  top: 103px;
 
   font-family: "Montserrat";
   text-align: center;
@@ -284,7 +275,7 @@ button {
   width: 80px;
   height: 30px;
   left: 413px;
-  top: 105px;
+  top: 101px;
 
   font-family: "Montserrat";
   text-align: center;
