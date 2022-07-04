@@ -143,6 +143,7 @@ table {
   border: 1px solid #3b2020;
   font-size: 1.1rem;
   text-align: center;
+  font-family: "Montserrat";
   color: #300707;
 }
 table thead {
